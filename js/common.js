@@ -1,11 +1,26 @@
 jQuery(document).ready(function ($) {
 
+
+	
+
 	
   $('.burger').on('click', function() {
 		$('.burger').toggleClass('burger-active');
 		$('.header').toggleClass('header-active');
 		$('.header-nav-menu').slideToggle(200);
 	});
+	$('.content-price-wrap-item-title').on('click', function() {
+		if ($(this).parent().hasClass('content-price-wrap-item-active')) {
+			$(this).parent().removeClass('content-price-wrap-item-active');
+			$(this).next().slideUp(200);
+		} else {
+			$(this).parent().addClass('content-price-wrap-item-active');
+			$(this).next().slideDown(200);
+		}
+	});
+  
+	
+  
 
 	$('#check').on('change', function() {
 		if ($('#check').is(':checked')) {
@@ -72,7 +87,19 @@ jQuery(document).ready(function ($) {
 	});
   
 
-
+	$(window).scroll(function() { 
+		if ($(window).scrollTop() > 520) {
+			$('.up-arr').fadeIn(100);
+		} else {
+			$('.up-arr').fadeOut(100);
+		}
+	 });
+	$(".click").click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top - 00;
+		$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 500);
+		return false;
+	});
 
 
 	const selects = document.querySelectorAll('select');
@@ -81,5 +108,15 @@ jQuery(document).ready(function ($) {
 				elem.parentElement.classList.add('select-wrapper');
 		});
 	} //end selects forEach / Добавление стрелочки к обертке select
+
+	const links = document.querySelectorAll('a');
+
+	if (links) {
+		links.forEach((elem) => {
+			if (elem.href.indexOf('#') != -1) {
+				elem.classList.add('click');
+			}
+		});
+	}
 
 }); //document ready

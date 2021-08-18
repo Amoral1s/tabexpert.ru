@@ -103,7 +103,7 @@ h2.title
           z-index: 1
           bottom: 0
           right: 0
-
+  
 .about
   background-image: url(../img/about/bg.jpg)
   background-repeat: no-repeat
@@ -202,6 +202,7 @@ h2.title
           position: relative
           height: 60px
           margin-top: 55px
+          border-radius: 4px
           &::after
             position: absolute
             content: ''
@@ -214,9 +215,13 @@ h2.title
             background-repeat: no-repeat
             background-size: contain
             background-position: center
-            input.button
-              position: relative
-              font-size: 16px
+            border-radius: 4px
+          input[type="submit"].button
+            position: relative
+            font-size: 16px
+            padding: 0
+            border-radius: 4px
+            padding-right: 20px
         input[type="tel"],
         input[type="text"]
           width: calc(50% - 8px)
@@ -249,6 +254,36 @@ h2.title
           input[type="text"]
             width: 100%
 
+.page-question
+  background-image: none
+  background: linear-gradient(260.92deg, #223268 8.78%, #324BA5 101.28%)
+  form
+    .form-row
+      div
+        position: relative
+        cursor: pointer
+        overflow: hidden
+        z-index: 1
+        &::before
+          position: absolute
+          content: ''
+          height: 100%
+          width: 100%
+          background-color: rgba(#fff, .4)
+          transition: .2s
+          transform: translateX(-30%)
+        &:hover
+          &::before
+            z-index: -1
+            transition: .2s
+            transform: translateX(0%)
+
+            
+        input.button
+          background: transparent
+          box-shadow: none
+          border: none
+
 .contacts
   &-bot
     iframe
@@ -272,6 +307,7 @@ h2.title
         margin-bottom: 40px
       .button
         box-shadow: 0px 10px 30px rgba(94, 129, 255, 0.4)
+        font-size: 16px
         &:hover
           background-color: $dark
         p
@@ -310,6 +346,32 @@ h2.title
             display: block
           .link-email
             color: #000
+
+.page-contacts
+  .contacts-top-left
+    .page-button
+      background: transparent
+      box-shadow: none
+      p
+        margin-bottom: 0
+      position: relative
+      overflow: hidden
+      color: #000
+      &::after
+        position: absolute
+        content: ''
+        height: 100%
+        width: 100%
+        background-color: #344068
+        opacity: .4
+        transition: .2s
+        transform: translateX(-30%)
+        z-index: -1
+      &:hover
+        background: transparent
+        transition: .2s
+        &::after
+          transform: translateX(0%)
 
 .footer
   background-repeat: no-repeat
@@ -373,8 +435,6 @@ h2.title
     &-logo
       img
         width: 170px
-        
-
 
 .overlay
   position: fixed
@@ -504,6 +564,172 @@ h2.title
       border-radius: 5px
     .close
       color: #fff
+
+.content
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  flex-wrap: wrap
+  h2
+    font-size: 40px
+    margin-bottom: 60px
+    max-width: 600px
+  &-left
+    width: 50%
+    margin-bottom: 120px
+    h2
+      margin-bottom: 120px
+  &-right
+    width: 50%
+    padding-right: 100px
+    p
+      display: block
+      margin-bottom: 25px
+      font-size: 18px
+      line-height: 1.5
+  &-price
+    width: 100%
+    &>p
+      font-size: 18px
+      display: block
+      margin-bottom: 15px
+    &-wrap
+      display: flex
+      justify-content: flex-start
+      align-items: flex-start
+      flex-wrap: wrap
+      width: 100%
+      &-item
+        width: calc(33.3% - 10px)
+        margin-bottom: 15px
+        padding: 40px
+        background-color: #fff
+        border: 1px solid #E5E5E5
+        border-bottom: 3px solid #223268
+        position: relative
+        display: block
+        cursor: pointer
+        transition: .2s
+        min-height: 230px
+        margin-right: 15px
+        &:nth-child(3n + 3)
+          margin-right: 0
+        &:hover
+          .arrow
+            img
+              transform: rotate(90deg)
+        &-text
+          display: none
+          .table
+            margin-bottom: 50px
+            &-title
+              display: flex
+              justify-content: space-between
+              opacity: 0.4
+              color: $dark
+              font-size: 14px
+              margin-bottom: 25px
+            &-row
+              font-size: 18px
+              display: flex
+              justify-content: space-between
+              align-items: center
+              margin-bottom: 15px
+              color: $dark
+              b,p
+                max-width: 50%
+        .page-button
+          background: transparent
+          box-shadow: none
+          height: 50px
+          p
+            margin-bottom: 0
+          position: relative
+          overflow: hidden
+          color: #000
+          z-index: 1
+          font-weight: 700
+          &::after
+            position: absolute
+            content: ''
+            height: 100%
+            width: 100%
+            background-color: #344068
+            opacity: .4
+            transition: .2s
+            transform: translateX(-30%)
+            z-index: -1
+          &:hover
+            background: transparent
+            transition: .2s
+            &::after
+              transform: translateX(0%)
+            &:hover
+              transition: .2s
+          .arrow
+            img
+              transition: .2s
+              transform: rotate(90deg)
+        h3
+          font-size: 24px
+          color: $dark
+          display: block
+          max-width: 100%
+          padding-right: 60px
+          min-height: 120px
+        .arrow
+          display: flex
+          justify-content: space-between
+          align-items: center
+          width: 100%
+          transition: .2s
+          position: absolute
+          top: 160px
+          left: 40px
+          width: calc(100% - 80px)
+          img
+            transition: .2s
+          p
+            font-size: 18px
+
+.content-price-wrap-item-active
+  .content
+    &-price
+      &-wrap
+        &-item
+          &-title
+            .arrow
+              transition: .2s
+              top: 50px
+              p
+                opacity: 0
+              img
+                transform: rotate(90deg)
+          
+.up-arr
+  position: fixed
+  bottom: 20px
+  left: 20px
+  height: 30px
+  width: 30px
+  background-color: $main
+  border-radius: 5px
+  cursor: pointer
+  transition: .2s
+  display: none
+  &:hover
+    transition: .2s
+    background-color: $dark
+  &-wrap
+    height: 30px
+    width: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 5px
+
+
+
 
 @import "main/_media1200"
 @import "main/_media992"

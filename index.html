@@ -35,7 +35,7 @@
   
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="header-nav container">
       <a href="/" class="header-nav-logo">
         <img src="img/logo.png" alt="TAB">
@@ -43,11 +43,10 @@
       <!-- /.header-nav-logo -->
       <div class="header-nav-menu">
         <ul>
-          <li><a href="#">О компании</a></li>
-          <li><a href="#">Наши услуги</a></li>
-          <li><a href="#">Сертификаты</a></li>
-          <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="#services">Наши услуги</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#sertificates">Сертификаты</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
         <!-- /.ul -->
         <div class="phone">
@@ -101,7 +100,7 @@
     <!-- /.container offer-wrap -->
   </section>
 
-  <section class="services container">
+  <section class="services container" id="services">
     <h2 class="title">
       <span>
         Для комплексного решения вопросов строительства
@@ -232,7 +231,7 @@
     <!-- /.services-wrap -->
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container about-wrap">
       <div class="about-wrap-left">
         <h2>
@@ -254,7 +253,7 @@
     <!-- /.container about-wrap -->
   </section>
 
-  <section class="sert container">
+  <section class="sert container" id="sertificates">
     <h2 class="title">
       <span>
         Мы гарантируем качество
@@ -274,7 +273,7 @@
     <!-- /.sert-wrap -->
   </section>
 
-  <section class="question">
+  <section class="question" id="question">
     <div class="container question-wrap">
       <div class="question-wrap-left">
         <p>
@@ -318,7 +317,7 @@
     <!-- /.container question-wrap -->
   </section>
 
-  <section class="contacts container">
+  <section class="contacts container" id="contacts">
     <div class="contacts-top">
       <div class="contacts-top-left">
         <p>
@@ -498,6 +497,13 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/4kY6y-mfFi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
+  <a href="#header" class="click up-arr">
+    <div class="up-arr-wrap">
+      <img src="img/icons/up.svg" alt="icon">
+    </div>
+  </a>
+
+
 
   <script src="js/jq-3-4-1.js"></script>
   <script src="js/slick.min.js"></script>

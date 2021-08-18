@@ -689,6 +689,8 @@ section {
           box-shadow: none;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+  font-size: 16px;
 }
 
 .page-button p {
@@ -707,6 +709,7 @@ section {
   -webkit-transform: translateX(-30%);
       -ms-transform: translateX(-30%);
           transform: translateX(-30%);
+  z-index: -1;
 }
 
 .page-button:hover {
