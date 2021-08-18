@@ -661,6 +661,67 @@ section {
   margin-bottom: 0;
 }
 
+.page-offer {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding-top: 240px;
+  padding-bottom: 60px;
+}
+
+.page-offer p {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.page-offer h1 {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.page-button {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-button p {
+  margin-bottom: 0;
+}
+
+.page-button::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  -webkit-transform: translateX(-30%);
+      -ms-transform: translateX(-30%);
+          transform: translateX(-30%);
+}
+
+.page-button:hover {
+  background: transparent;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.page-button:hover::after {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
 @media (max-width: 1680px) {
   .header-nav-menu ul li {
     margin-left: 20px;
@@ -861,6 +922,16 @@ section {
   }
   .offer-wrap-left h1 span {
     font-size: 32px;
+  }
+  .page-offer {
+    padding-top: 180px;
+    background-position: bottom;
+  }
+  .page-offer p {
+    font-size: 18px;
+  }
+  .page-offer h1 {
+    font-size: 34px;
   }
 }
 

@@ -175,6 +175,43 @@
             font-weight: 700
             margin-bottom: 0
 
+.page-offer
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  color: #fff
+  padding-top: 240px
+  padding-bottom: 60px
+  p
+    font-size: 18px
+    display: block
+    margin-bottom: 15px
+  h1
+    font-size: 40px
+    display: block
+    margin-bottom: 50px
+
+.page-button
+  background: transparent
+  box-shadow: none
+  p
+    margin-bottom: 0
+  position: relative
+  overflow: hidden
+  &::after
+    position: absolute
+    content: ''
+    height: 100%
+    width: 100%
+    background-color: rgba(255, 255, 255, 0.4)
+    transition: .2s
+    transform: translateX(-30%)
+  &:hover
+    background: transparent
+    transition: .2s
+    &::after
+      transform: translateX(0%)
+
 @import "header/_media1200"
 @import "header/_media992"
 @import "header/_media768"

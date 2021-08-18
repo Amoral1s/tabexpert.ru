@@ -731,11 +731,9 @@ h2.title p {
 }
 
 .popup-callback {
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  background-image: url(../img/bg-footer.jpg);
+  background: -webkit-linear-gradient(189.08deg, #223268 8.78%, #324BA5 101.28%);
+  background: -o-linear-gradient(189.08deg, #223268 8.78%, #324BA5 101.28%);
+  background: linear-gradient(260.92deg, #223268 8.78%, #324BA5 101.28%);
   color: #fff;
   width: 100%;
   max-width: 600px;
@@ -864,11 +862,9 @@ h2.title p {
 }
 
 .popup-video {
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  background-image: url(../img/bg-footer.jpg);
+  background: -webkit-linear-gradient(189.08deg, #223268 8.78%, #324BA5 101.28%);
+  background: -o-linear-gradient(189.08deg, #223268 8.78%, #324BA5 101.28%);
+  background: linear-gradient(260.92deg, #223268 8.78%, #324BA5 101.28%);
   color: #fff;
   width: 100%;
   max-width: 600px;
