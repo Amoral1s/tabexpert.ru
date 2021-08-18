@@ -1,0 +1,116 @@
+@media (max-width: 992px)
+  .header
+    transition: .2s
+    .burger
+      display: block
+      height: 23px
+      width: 40px
+      position: relative
+      span
+        background-color: #fff
+        height: 3px
+        width: 40px
+        position: absolute
+        left: 0
+        top: 0
+        display: block
+        transition: .2s
+        &:nth-child(2)
+          top: 10px
+          width: 30px
+          left: 10px
+        &:nth-child(3)
+          top: 20px
+      &-active
+        span
+          transition: .2s
+          &:nth-child(1)
+            top: 8px
+            transform: rotate(45deg) 
+            left: 0
+            width: 40px
+          &:nth-child(2)
+            top: 8px
+            transform: rotate(-45deg) 
+            width: 40px
+            left: 0
+          &:nth-child(3)
+            top: 8px
+            left: 0
+            transform: rotate(-45deg) 
+            width: 40px
+    &-nav
+      padding-top: 15px
+      padding-bottom: 15px
+      &-menu
+        display: none
+        position: absolute
+        background-color: #fff
+        width: 100%
+        left: 0
+        top: 0
+        top: 72px
+        padding-bottom: 30px
+        .adress,
+        .phone
+          margin-top: 30px
+          margin-left: 30px
+          p,b,a
+            color: #000
+          p
+            font-size: 16px
+          b,a 
+            font-size: 20px
+        ul
+          display: block
+          margin-top: 30px
+          li
+            margin-left: 30px
+            a
+              color: $main
+              font-size: 18px
+              margin-bottom: 20px
+              display: block
+
+    &-active
+      transition: .2s
+      background-color: $main
+
+  .offer
+    overflow: hidden
+    .man
+      right: -100px
+      bottom: -50px
+      z-index: 1
+    &-wrap
+      padding-top: 160px
+      &-left
+        h1
+          font-size: 40px
+          span
+            font-size: 36px
+        p
+          font-size: 18px
+          max-width: 400px
+        &-btns
+          display: block
+          position: relative
+          z-index: 10
+          .button
+            margin-bottom: 30px
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
